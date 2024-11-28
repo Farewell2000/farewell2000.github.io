@@ -160,8 +160,29 @@
                 <a href="#topic-cscw" onClick="return publicationByTopicSpecific(this)" data-topic="cscw">Computer-Supported Cooperative Work</a> 
                 (* indicates equal contribution) 
             </p> -->
-
             <div id="main-pub-card-container" class="hide">
+                <div class="pub-card" data-topic="Computer-Supported Cooperative Work" data-year="2024" data-selected="true">
+                    <div class="row">
+                        <div class="col-l col-xs-12 col-lg-3">
+                            <img src="data/projects/Cos Commission.png" width="100%" />
+                        </div>
+                        <div class="col-r col-xs-12 col-lg-9">
+                            <div class="pub-card-body">
+                                <h5 class="title">Collective Creation of Intimacy: Exploring the Cosplay Commission Practice in the Otome Game Community in China</h5>
+                                <h6 class="authors">
+                                    <u>Yihao Zhou</u>,
+                                    <a>Haowei Xu</a>,
+                                    <a>Lili Zhang</a>,
+                                    <a href="https://www.shengdongzhao.com/">Shengdong Zhao</a>
+                                </h6>
+                                <p class="info">
+                                    <b>Chinese CHI 2024</b>
+                                    <a>In press</a> 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="pub-card" data-topic="affective-computing" data-year="2024" data-selected="false">
                     <div class="row">
                         <div class="col-l col-xs-12 col-lg-3">
@@ -176,7 +197,7 @@
                                     <a>Jingyi Hu</a>,
                                 </h6>
                                 <p class="info">
-                                    <b> Heliyon</b>
+                                    <b>Heliyon</b>
                                     <a href="https://doi.org/10.1016/j.heliyon.2024.e25017">Paper</a> 
                                 </p>
                             </div>
@@ -473,8 +494,8 @@ $(function() {
         allTopics.push({name: $(allTopicsLink[topicId]).data("topic"), title: $(allTopicsLink[topicId]).html()});
     }
 
-    $("#publication-by-selected").click();
     $("#publication-by-date").click();
+    $("#publication-by-selected").click();
     $("#main-pub-card-container").removeClass("hide");
 });
 </script>
