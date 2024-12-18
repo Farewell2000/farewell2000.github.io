@@ -20,7 +20,7 @@
         #main{z-index:2;margin:0 auto;position:absolute;top:5%;width:100%;min-width:240px;text-align:center}
 
         #main-content{background:rgba(238,238,238,0.95);padding:0;text-align:center;cursor:default;text-align:center}
-        #main-content{margin-left:6.5104167%;width:86.9791667%;}
+        #main-content{margin-left:6%;width:88%;}
         @media (min-width: 768px) {
             #main-content{width:66%;min-width:668px;margin-left:50px}
         }
@@ -28,14 +28,14 @@
             #main-content{width:66%;max-width:900px;margin-left:100px}
         }
 
-
         /* Avatar, Name, etc. */
-        #main-content-container{margin:0 auto;padding:15px 0em 15px 0em;max-width:1080px;}
+        #main-content-container{margin:0 auto;padding:15px 15px 15px 15px;max-width:1080px;}
         @media (min-width: 768px) {
-            #main-content-container{padding:15px 0 15px 2em;}
+            #main-content-container{padding:15px 15px 15px 15px;}
+            #main-content-container .col-avatar{text-align:center}
         }
-        #main-content-container .col-avatar{text-align:center}
-        @media (min-width: 768px) {
+        @media (min-width: 1200px) {
+            #main-content-container{padding:15px 15px 15px 15px;}
             #main-content-container .col-avatar{text-align:right}
         }
         #main-content-container .col-avatar .avatar{z-index:100;width:150px;height:150px;margin-top:0px;border-radius:100%;box-shadow:0 0 0 0.3em #fff;opacity:1}
@@ -116,13 +116,17 @@
             <div class="col-sm-12 col-md-3 col-avatar">
                 <img src="static/img/avatar1.jpg" class="avatar" />
             </div>
-            <div class="col-sm-12 col-md-9 col-info">
+            <div class="col-sm-12 col-md-9">
                 <div id="main-info-container" class="container">
                     <div class="row">
-                        <div class="col-md-12 col-xl-6 col-name">
+                        <div class="col-name">
                             <div class="textbox-info">
                                 <h1 class="name"><span>Yihao Zhou </span><img style="height:45px;"src="static/img/name1.png"></h1>
                                 <p class="email">Email: yihaozhou [at] psu [dot] edu</p>
+                                <p class="text">
+                                    I am a master's student in Informatics at <a href="https://ist.psu.edu/">Penn State IST</a>, advised by <a href="https://tanusreesharma.github.io/">Dr. Tanusree Sharma</a>.
+                                    Previously, I obtained my B.Eng. degree in Computer Science and Technology from <a href="https://www.ecnu.edu.cn/">East China Normal University</a>.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -133,16 +137,19 @@
 
     <div id="main-more-container">
         <div id="main-bio-container">
-            <p>
-            I am a master's student in Informatics at <a href="https://ist.psu.edu/">Penn State IST</a>, advised by <a href="https://tanusreesharma.github.io/">Dr. Tanusree Sharma</a>.
-            Previously, I obtained my B.Eng. degree in Computer Science and Technology from <a href="https://www.ecnu.edu.cn/">East China Normal University</a>.
-            </p>
-
             <h5 class="subtitle">Research Interests</h5>
             <ul>
-                <li><b>Computer-Mediated Communication</b>: CMC for social support, CMC in virtual environments.</li>
-                <li><b>Computer-Supported Cooperative Work</b>: Video game, online community, privacy and safety in subcultures</li>
-                <li><b>Affective Computing</b>: Personalized affect recognition, perspective-taking and empathy.</li>
+                <li><b>Computer-Mediated Communication</b>: CMC for social support; CMC in virtual environments.</li>
+                <li><b>Computer-Supported Cooperative Work</b>: Video game culture; online community</li>
+                <li><b>Affective Computing</b>: Emotion recognition; sentiment analysis</li>
+            </ul>
+
+            <h5 class="subtitle">News</h5>
+            <ul>
+                <li>
+                    I have several ongoing projects and am open to collaboration. If you are interested in my work or share similar research interests, please feel free to email me. 
+                    I encourage students or researchers with limited experience to reach out. Let's just say 'Hi' to start the conversation.
+                </li>
             </ul>
         </div>
 
@@ -176,7 +183,7 @@
                                     <a href="https://www.shengdongzhao.com/">Shengdong Zhao</a>
                                 </h6>
                                 <p class="info">
-                                    <b>Chinese CHI 2024</b>
+                                    <a>Chinese CHI 2024</a>
                                     <a href="https://arxiv.org/abs/2412.00630">Paper Preprint</a> 
                                 </p>
                             </div>
