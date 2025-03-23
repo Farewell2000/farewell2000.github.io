@@ -6,20 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Yihao Zhou is a master's student in Informatics at Penn State IST.">
-    <meta name="keywords" content="Yihao Zhou, HCI, VR, Affective Computing, Privacy">
+    <meta name="keywords" content="Yihao Zhou, HCI, VR, Video Game, Virtual World, Privacy">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="static/img/favicon.ico">
 
 
     <style type="text/css">
-        body{margin:0;padding:0;background-color:#eee;}
-        a{color:#4e613e}
-        a:hover{color:#566c7f}
+
+        /* Color Scheme: Ghost of Utopia */
+        :root {
+            --background-color: #fefbf5;
+            --highlight-color: #b6274e;
+            --main-color: #225573;
+            --link-color: #684e43;
+            --link-color-hover: #292c1f;
+            --secondary-content-background-color: rgba(238,238,238,0.75);
+        }
+
+        body{margin:0;padding:0;}
+        a{color:var(--link-color)}
+        a:hover{color:var(--link-color-hover)}
         #background{position:fixed;top:0;overflow:hidden;height:0}
         #main{z-index:2;margin:0 auto;position:absolute;top:5%;width:100%;min-width:240px;text-align:center}
 
-        #main-content{background:rgba(238,238,238,0.95);padding:0;text-align:center;cursor:default;text-align:center}
+        #main-content{padding:0;text-align:center;cursor:default;text-align:center}
         #main-content{margin-left:6%;width:88%;}
         @media (min-width: 768px) {
             #main-content{width:66%;min-width:668px;margin-left:50px}
@@ -29,7 +40,7 @@
         }
 
         /* Avatar, Name, etc. */
-        #main-content-container{margin:0 auto;padding:15px 15px 15px 15px;max-width:1080px;}
+        #main-content-container{background:var(--background-color);margin:0 auto;padding:15px 15px 15px 15px;max-width:1080px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif}
         @media (min-width: 768px) {
             #main-content-container{padding:15px 15px 15px 15px;}
             #main-content-container .col-avatar{text-align:center}
@@ -38,13 +49,15 @@
             #main-content-container{padding:15px 15px 15px 15px;}
             #main-content-container .col-avatar{text-align:right}
         }
-        #main-content-container .col-avatar .avatar{z-index:100;width:150px;height:150px;margin-top:0px;border-radius:100%;box-shadow:0 0 0 0.3em #fff;opacity:1}
+        #main-content-container .col-avatar .avatar{z-index:100;width:150px;height:150px;margin-top:0px;border-radius:100%;box-shadow:0 0 0 0.3em #eee;opacity:1}
         #main-content-container .col-info{height:100%;align-items:center;display:-webkit-flex;height:150px}
 
         #main-info-container{padding-top:15px}
-        #main-info-container .col-name{text-align:center}
-        #main-info-container .col-name .textbox-info{display:inline-block;margin:0 auto;text-align:left}
-        #main-info-container .col-name .name{margin:0;color:#56577f;font-size:1.85em;font-family:"Lato",Helvetica,sans-serif}
+        #main-info-container .col-name{text-align:center;margin-top:30px}
+        @media (min-width: 768px) { #main-info-container .col-name{text-align:left;margin-top:0;}
+        }
+        #main-info-container .col-name .text{text-align:left;margin-bottom:0.5rem;}
+        #main-info-container .col-name .name{margin:0;color:var(--main-color);font-size:1.85em;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif}
         #main-info-container .col-name .email{color:#666; font-size:14px}
         #main-info-container .col-link{text-align:center;margin:-5px 0 -25px;}
         #main-info-container .col-link ul {margin:0px auto auto;padding:0;list-style:none;text-align:center}
@@ -56,13 +69,13 @@
         #main-info-container .col-link li a.padding{padding:0px 0px;font-size:22px}
 
         /* Other */
-        #main-more-container{background:#ffffff;width:100%;padding:0 30px}
+        #main-more-container{background:var(--secondary-content-background-color);width:100%;padding:0 30px}
 
-        #main-bio-container{margin:auto;padding: 0 0em;max-width:1080px;text-align:left;padding-top:30px;max-width:1080px;font-family:"Lato",Helvetica,sans-serif;font-size:1rem;line-height:1.4}
-        #main-bio-container .subtitle{margin-top:30px;color:#566c7f}
+        #main-bio-container{margin:auto;padding: 0 0em;max-width:1080px;text-align:left;padding-top:15px;max-width:1080px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;font-size:1rem;line-height:1.4}
+        #main-bio-container .subtitle{margin-top:30px;color:var(--main-color)}
 
-        #main-pub-container{margin:auto;padding: 0 0em;max-width:1080px;text-align:left;padding-top:30px;max-width:1080px;font-family:"Lato",Helvetica,sans-serif}
-        #main-pub-container .subtitle{color:#566c7f;}
+        #main-pub-container{margin:auto;padding: 0 0em;max-width:1080px;text-align:left;padding-top:15px;max-width:1080px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif}
+        #main-pub-container .subtitle{color:var(--main-color);}
         #main-pub-container .subtitle a {font-weight:400;font-size:18px}
         #main-pub-container .subtitle a.activated {color:#333333}
         #main-pub-container .subtitle a.activated:focus,
@@ -74,15 +87,15 @@
         #main-pub-container .subtitle-aux a.activated:hover {text-decoration:none;cursor:initial}
 
 
-        #main-pub-card-container >h5{margin-bottom:10px;margin-top:20px;font-family:"Lato",Helvetica,sans-serif}
+        #main-pub-card-container >h5{margin-bottom:10px;margin-top:20px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif}
         #main-pub-card-container .pub-card{width: 100%;padding-bottom:20px;font-size:1rem}
         #main-pub-card-container .pub-card .col-l{text-align:center;padding-top:20px}
         #main-pub-card-container .pub-card .col-r{padding-top:20px}
         #main-pub-card-container .pub-card img{width:100%;margin:0 auto}
         #main-pub-card-container .pub-card-body{width:100%;background:transparent;padding-left:0px}
         #main-pub-card-container .pub-card .title{font-weight:600;font-size:1rem;margin-bottom:4px;line-height:1.4}
-        #main-pub-card-container .pub-card .authors{font-weight:400;color:#666666;margin-bottom:4px;line-height:1.4}
-        #main-pub-card-container .pub-card .authors a{color:#666666}
+        #main-pub-card-container .pub-card .authors{font-weight:400;color:var(--main-color);margin-bottom:4px;line-height:1.4}
+        #main-pub-card-container .pub-card .authors a{color:var(--main-color)}
         #main-pub-card-container .pub-card .authors u{color:#333333;font-weight:600;text-decoration:none}
         #main-pub-card-container .pub-card .conference{color:#333333;font-weight:600}
         #main-pub-card-container .pub-card .journal{color:#333333;font-weight:600}
@@ -92,15 +105,15 @@
         #main-pub-card-container .col-l,
         #main-pub-card-container .col-r{vertical-align:top;display:inline-block;margin:0;padding-left:0px}
 
-        #footer{padding:1.5em 0 1.5em;min-width:240px;background:#f4f4f4;opacity:0.95;font-size:14px;line-height:12px;text-align:left}
+        #footer{padding:1.5em 0 1.5em;min-width:240px;background:var(--background-color);opacity:0.9;font-size:14px;line-height:12px;text-align:left}
         #footer .container{max-width:540px;padding:0 45px}
         #footer .row{align-items:center}
         #footer .copyright{flex-grow:1;margin:5px auto 5px;text-align:left;display:block;font-size:14px;line-height:1.4}
-        #footer a{color:#666666}
-        #footer a:hover{color:#333333}
+        #footer a{color:var(--link-color)}
+        #footer a:hover{color:var(--link-color-hover)}
 
         .bold{font-weight:600}
-        .highlight{color:#BB2222;font-weight:600}
+        .highlight{color:var(--highlight-color);font-weight:600}
         .hide{display:none}
     </style>
 </head>
@@ -182,6 +195,7 @@
                                 </h6>
                                 <p class="info">
                                     <a class="conference">CHI 2025 Late-Breaking Work</a>
+                                    <a href="https://arxiv.org/abs/2412.00630">Preprint</a> 
                                 </p>
                             </div>
                         </div>
@@ -290,8 +304,8 @@
         <div class="container">
             <div class="row">
                 <div class="copyright">
-                    &copy; 2024<br />
-                    Background artwork by <a href="https://beagle.artstation.com/">Gabriel Gomez</a>.
+                    &copy; 2025<br />
+                    Background artwork by <a href="https://aenamiart.artstation.com/">Alena Aenami</a>.
                 </div>
             </div>
         </div>
